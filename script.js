@@ -9,7 +9,7 @@ let statesData = {};
 
 
 function message() {
-	alert('Stay Home Stay Safe');
+	alert('Stay Home Stay Safe'); // A safety appeal
 }
 
 function format(s) {
