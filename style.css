@@ -1,0 +1,10 @@
+body > h1 {
+    font-size: 50px;
+    text-align: center;
+    color: blue;
+    padding-bottom: 30px;
+}
+body > nav {
+    font-size: 30px;
+    padding-bottom: 50px;
+}

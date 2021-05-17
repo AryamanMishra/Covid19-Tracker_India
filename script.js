@@ -8,6 +8,17 @@ let statesData = {};
 // }
 
 
+function format(s) {
+	if (s.length < 5)
+		return s;
+	else if (s.length == 5)
+		return s.substring(0,2) + ',' + s.substring(2);
+	else if (s.length == 6)
+		return s.substring(0,1) + ',' + s.substring(1,3) + ',' + s.substring(3);
+	else if (s.length == 7)
+		return s.substring(0,2) + ',' + s.substring(2,4) + ',' + s.substring(4);
+}
+
 const fetch_allStatesData = async function() {
 	const getstates = await axios.get('https://api.covid19india.org/state_district_wise.json');
 	statesData = getstates.data;
@@ -25,7 +36,8 @@ const fetch_activeData = async function() {
 				for (const district in districts) {
 					actives += districts[district]["active"];
 				}
-				document.getElementById(`${state}_Active`).innerText = actives;
+				actives = actives.toString();
+				document.getElementById(`${state}_Active`).innerText = format(actives);
 			}
 		}
     }
@@ -45,7 +57,8 @@ const fetch_deceasedData = async function() {
 				for (const district in districts) {
 					deaths += districts[district]["deceased"];
 				}
-				document.getElementById(`${state}_Deaths`).innerText = deaths;
+				deaths = deaths.toString();
+				document.getElementById(`${state}_Deaths`).innerText = format(deaths);
 			}
 		}
     }
@@ -65,7 +78,8 @@ const fetch_recoveredData = async function() {
 				for (const district in districts) {
 					recoveries += districts[district]["recovered"];
 				}
-				document.getElementById(`${state}_Recovered`).innerText = recoveries;
+				recoveries = recoveries.toString();
+				document.getElementById(`${state}_Recovered`).innerText = format(recoveries);
 			}
 		}
     }
