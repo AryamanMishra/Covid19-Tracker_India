@@ -8,6 +8,10 @@ let statesData = {};
 // }
 
 
+function message() {
+	alert('Stay Home Stay Safe');
+}
+
 function format(s) {
 	if (s.length < 5)
 		return s;
@@ -90,6 +94,7 @@ const fetch_recoveredData = async function() {
 
 
 //test();
+message();
 fetch_allStatesData();
 fetch_activeData();
 fetch_deceasedData();
