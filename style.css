@@ -1,10 +1,19 @@
 body > h1 {
     font-size: 50px;
     text-align: center;
-    color: blue;
+    color: cyan;
     padding-bottom: 30px;
 }
 body > nav {
     font-size: 30px;
     padding-bottom: 50px;
+}
+body {
+    background-color: #011A32;
+}
+table {
+    color:white;
+}
+table > thead {
+    color:orange;
 }
