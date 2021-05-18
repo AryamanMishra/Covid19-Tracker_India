@@ -7,273 +7,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
   </head>
   <body>
       <u><h1>Covid19 Statistics</u></h1>
-      <nav> <a href="resources.htm" style="color:springgreen;">Resources</a></nav>
-    <table>
-      <thead>
-        <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>S.No</u></th>
-        <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>States/UTs</u></th>
-        <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>Cases</u></th>
-        <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>Deaths</u></th>
-        <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>Recovered</u></th>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">1.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Andaman and Nicobar Islands</td>
-          <td id ="Andaman and Nicobar Islands_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Andaman and Nicobar Islands_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Andaman and Nicobar Islands_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">2.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Andhra Pradesh</td>
-          <td id ="Andhra Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Andhra Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Andhra Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">3.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Arunachal Pradesh</td>
-          <td id ="Arunachal Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Arunachal Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Arunachal Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">4.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Assam</td>
-          <td id ="Assam_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Assam_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Assam_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">5.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Bihar</td>
-          <td id ="Bihar_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Bihar_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Bihar_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">6.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Chandigarh</td>
-          <td id ="Chandigarh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Chandigarh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Chandigarh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">7.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Chhattisgarh</td>
-          <td id ="Chhattisgarh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Chhattisgarh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Chhattisgarh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">8.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Delhi</td>
-          <td id ="Delhi_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Delhi_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Delhi_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">9.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Dadra and Nagar Haveli and Daman and Diu</td>
-          <td id ="Dadra and Nagar Haveli and Daman and Diu_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Dadra and Nagar Haveli and Daman and Diu_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Dadra and Nagar Haveli and Daman and Diu_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">10.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Goa</td>
-          <td id ="Goa_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Goa_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Goa_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">11.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Gujarat</td>
-          <td id ="Gujarat_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Gujarat_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Gujarat_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">12.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Himachal Pradesh</td>
-          <td id ="Himachal Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Himachal Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Himachal Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">13.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Haryana</td>
-          <td id ="Haryana_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Haryana_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Haryana_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">14.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Jharkhand</td>
-          <td id ="Jharkhand_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Jharkhand_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Jharkhand_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">15.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Jammu and Kashmir</td>
-          <td id ="Jammu and Kashmir_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Jammu and Kashmir_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Jammu and Kashmir_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">16.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Karnataka</td>
-          <td id ="Karnataka_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Karnataka_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Karnataka_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">17.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Kerala</td>
-          <td id ="Kerala_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Kerala_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Kerala_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">18.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Ladakh</td>
-          <td id ="Ladakh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Ladakh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Ladakh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">19.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Lakshadweep</td>
-          <td id ="Lakshadweep_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Lakshadweep_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Lakshadweep_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">20.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Madhya Pradesh</td>
-          <td id ="Madhya Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Madhya Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Madhya Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">21.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Maharashtra</td>
-          <td id ="Maharashtra_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Maharashtra_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Maharashtra_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">22.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Manipur</td>
-          <td id ="Manipur_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Manipur_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Manipur_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">23.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Meghalaya</td>
-          <td id ="Meghalaya_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Meghalaya_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Meghalaya_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">24.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Mizoram</td>
-          <td id ="Mizoram_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Mizoram_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Mizoram_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">25.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Nagaland</td>
-          <td id ="Nagaland_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Nagaland_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Nagaland_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">26.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Odisha</td>
-          <td id ="Odisha_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Odisha_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Odisha_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">27.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Puducherry</td>
-          <td id ="Puducherry_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Puducherry_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Puducherry_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">28.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Punjab</td>
-          <td id ="Punjab_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Punjab_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Punjab_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">29.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Rajasthan</td>
-          <td id ="Rajasthan_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Rajasthan_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Rajasthan_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">30.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Sikkim</td>
-          <td id ="Sikkim_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Sikkim_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Sikkim_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">31.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Tamil Nadu</td>
-          <td id ="Tamil Nadu_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Tamil Nadu_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Tamil Nadu_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">32.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Telangana</td>
-          <td id ="Telangana_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Telangana_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Telangana_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">33.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Tripura</td>
-          <td id ="Tripura_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Tripura_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Tripura_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">34.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Uttar Pradesh</td>
-          <td id ="Uttar Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Uttar Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Uttar Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">35.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Uttarakhand</td>
-          <td id ="Uttarakhand_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Uttarakhand_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="Uttarakhand_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-        <tr>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">36.</td>
-          <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">West Bengal</td>
-          <td id ="West Bengal_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="West Bengal_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-          <td id ="West Bengal_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
-        </tr>
-      </tbody>
-    </table>
+      <nav> <a href="resources.htm" style="color:violet;">Resources</a></nav>
+    <div id="main_table">
+      <table>
+        <thead id="headtable">
+          <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>S.No</u></th>
+          <th id="state_name" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>States/UTs</u></th>
+          <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>Active Cases</u></th>
+          <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>Deaths</u></th>
+          <th style="padding-right: 50px;padding-bottom:50px;font-size:30px;"><u>Recovered</u></th>
+        </thead>
+        <tbody id="table_body" style="border-top:1em;color:white">
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">1.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Andaman and Nicobar Islands</td>
+            <td id ="Andaman and Nicobar Islands_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Andaman and Nicobar Islands_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Andaman and Nicobar Islands_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">2.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Andhra Pradesh</td>
+            <td id ="Andhra Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Andhra Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Andhra Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">3.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Arunachal Pradesh</td>
+            <td id ="Arunachal Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Arunachal Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Arunachal Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">4.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Assam</td>
+            <td id ="Assam_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Assam_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Assam_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">5.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Bihar</td>
+            <td id ="Bihar_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Bihar_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Bihar_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">6.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Chandigarh</td>
+            <td id ="Chandigarh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Chandigarh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Chandigarh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">7.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Chhattisgarh</td>
+            <td id ="Chhattisgarh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Chhattisgarh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Chhattisgarh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">8.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Delhi</td>
+            <td id ="Delhi_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Delhi_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Delhi_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">9.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Dadra and Nagar Haveli and Daman and Diu</td>
+            <td id ="Dadra and Nagar Haveli and Daman and Diu_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Dadra and Nagar Haveli and Daman and Diu_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Dadra and Nagar Haveli and Daman and Diu_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">10.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Goa</td>
+            <td id ="Goa_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Goa_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Goa_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">11.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Gujarat</td>
+            <td id ="Gujarat_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Gujarat_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Gujarat_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">12.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Himachal Pradesh</td>
+            <td id ="Himachal Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Himachal Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Himachal Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">13.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Haryana</td>
+            <td id ="Haryana_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Haryana_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Haryana_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">14.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Jharkhand</td>
+            <td id ="Jharkhand_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Jharkhand_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Jharkhand_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">15.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Jammu and Kashmir</td>
+            <td id ="Jammu and Kashmir_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Jammu and Kashmir_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Jammu and Kashmir_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">16.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Karnataka</td>
+            <td id ="Karnataka_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Karnataka_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Karnataka_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">17.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Kerala</td>
+            <td id ="Kerala_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Kerala_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Kerala_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">18.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Ladakh</td>
+            <td id ="Ladakh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Ladakh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Ladakh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">19.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Lakshadweep</td>
+            <td id ="Lakshadweep_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Lakshadweep_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Lakshadweep_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">20.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Madhya Pradesh</td>
+            <td id ="Madhya Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Madhya Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Madhya Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">21.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Maharashtra</td>
+            <td id ="Maharashtra_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Maharashtra_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Maharashtra_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">22.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Manipur</td>
+            <td id ="Manipur_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Manipur_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Manipur_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">23.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Meghalaya</td>
+            <td id ="Meghalaya_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Meghalaya_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Meghalaya_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">24.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Mizoram</td>
+            <td id ="Mizoram_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Mizoram_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Mizoram_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">25.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Nagaland</td>
+            <td id ="Nagaland_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Nagaland_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Nagaland_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">26.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Odisha</td>
+            <td id ="Odisha_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Odisha_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Odisha_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">27.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Puducherry</td>
+            <td id ="Puducherry_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Puducherry_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Puducherry_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">28.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Punjab</td>
+            <td id ="Punjab_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Punjab_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Punjab_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">29.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Rajasthan</td>
+            <td id ="Rajasthan_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Rajasthan_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Rajasthan_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">30.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Sikkim</td>
+            <td id ="Sikkim_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Sikkim_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Sikkim_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">31.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Tamil Nadu</td>
+            <td id ="Tamil Nadu_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Tamil Nadu_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Tamil Nadu_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">32.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Telangana</td>
+            <td id ="Telangana_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Telangana_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Telangana_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">33.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Tripura</td>
+            <td id ="Tripura_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Tripura_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Tripura_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">34.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Uttar Pradesh</td>
+            <td id ="Uttar Pradesh_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Uttar Pradesh_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Uttar Pradesh_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">35.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">Uttarakhand</td>
+            <td id ="Uttarakhand_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Uttarakhand_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="Uttarakhand_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+          <tr>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">36.</td>
+            <td style="padding-right: 50px;padding-bottom:50px;font-size:30px;">West Bengal</td>
+            <td id ="West Bengal_Active" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="West Bengal_Deaths" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+            <td id ="West Bengal_Recovered" style="padding-right: 50px;padding-bottom:50px;font-size:30px;"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

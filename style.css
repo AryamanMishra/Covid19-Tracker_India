@@ -1,4 +1,4 @@
-body > h1 {
+h1 {
     font-size: 50px;
     text-align: center;
     color: cyan;
@@ -9,11 +9,16 @@ body > nav {
     padding-bottom: 50px;
 }
 body {
-    background-color: #011A32;
+    background-color: rgb(3, 19, 30);
 }
 table {
     color:white;
 }
-table > thead {
-    color:orange;
+#main_table {
+    margin: 100px;
+    border: 2px solid cyan;
+}
+#headtable {
+    background-color: forestgreen;
+    color:yellow;
 }
