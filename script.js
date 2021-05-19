@@ -56,16 +56,16 @@ function sortObject(object) {
 const fetch_allStatesData = async function() { 
 	const getstates = await axios.get('https://api.covid19india.org/state_district_wise.json');
 	statesData = getstates.data;
-}
+};
 
 
 /* A method to iterate through every state data and get active cases in each district
 and add them up to make state total active data*/
 const fetch_activeData = async function() { 
     try {
-        let config = {headers: {Accept: 'application/json'}}
+        let config = {headers: {Accept: 'application/json'}};
         const res = await axios.get('https://api.covid19india.org/state_district_wise.json',config);
-		for (state in statesData) {
+		for (const state in statesData) {
 			let actives = 0;
 			if (state != 'State Unassigned') {
 				let districts = res.data[state].districtData;
@@ -81,16 +81,16 @@ const fetch_activeData = async function() {
     catch(err) {
         console.log('Error in loading',err);
     }
-}
+};
 
 
 /* A method to iterate through every state data and get death cases in each district
 and add them up to make state total death data*/
 const fetch_deceasedData = async function() {
     try {
-        let config = {headers: {Accept: 'application/json'}}
+        let config = {headers: {Accept: 'application/json'}};
         const res = await axios.get('https://api.covid19india.org/state_district_wise.json',config);
-        for (state in statesData) {
+        for (let state in statesData) {
 			let deaths = 0;
 			if (state != 'State Unassigned') {
 				let districts = res.data[state].districtData;
@@ -106,7 +106,7 @@ const fetch_deceasedData = async function() {
     catch(err) {
         console.log('Error in loading',err);
     }
-}
+};
 
 
 /* A method to iterate through every state data and get recovered count in each district
@@ -131,7 +131,7 @@ const fetch_recoveredData = async function() {
     catch(err) {
         console.log('Error in loading',err);
     }
-}
+};
 
 //test();
 //message();
@@ -167,7 +167,7 @@ const actives_graphData = async function() {
 	}
 	statesnames_withactives = sortObject(statesnames_withactives); // Sorting the object in inc. order
 	return (statesnames_withactives);
-}
+};
 
 
 // Calling this method now to fill statesames_withactives with proper data
@@ -175,6 +175,7 @@ actives_graphData();
 
 // Google charts loader
 google.charts.load('current', {'packages':['corechart']});
+//google.load('visualization', '1', { packages: ['corechart', 'controls'] });
 google.charts.setOnLoadCallback(actives_graph);
 
 
@@ -208,7 +209,6 @@ function actives_graph() {
 		[`${brr[0]}`, Number(arr[0]),'white'],
 	]);
 	let options = {
-		is3D: true,
 		titleTextStyle: {
 			color: "white",
 			bold: "true",
@@ -260,7 +260,7 @@ const deceased_graphData = async function() {
 	
 	statesnames_withdeceased = sortObject(statesnames_withdeceased); // Sorting the object in inc. order
 	return (statesnames_withdeceased);
-}
+};
 deceased_graphData();
 
 
@@ -347,7 +347,7 @@ const recovered_graphData = async function() {
 	
 	statesnames_withrecovered = sortObject(statesnames_withrecovered); // Sorting the object in inc. order
 	return (statesnames_withrecovered);
-}
+};
 recovered_graphData();
 
 
