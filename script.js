@@ -204,7 +204,8 @@ function actives_graph() {
   		[`${brr[4]}`, Number(arr[4]),'red'],
 		[`${brr[3]}`, Number(arr[3]),'green'],
 		[`${brr[2]}`, Number(arr[2]),'gold'],
-		[`${brr[0]}`, Number(arr[0]),'cyan'],
+		[`${brr[1]}`, Number(arr[1]),'cyan'],
+		[`${brr[0]}`, Number(arr[0]),'white'],
 	]);
 	let options = {
 		is3D: true,
@@ -291,7 +292,8 @@ function deceased_graph() {
 		[`${brr[4]}`, Number(arr[4]),'red'],
 	  	[`${brr[3]}`, Number(arr[3]),'green'],
 	  	[`${brr[2]}`, Number(arr[2]),'gold'],
-	  	[`${brr[0]}`, Number(arr[0]),'cyan'],
+	  	[`${brr[1]}`, Number(arr[1]),'cyan'],
+		[`${brr[0]}`, Number(arr[0]),'white'],
   	]);
 	let options = {
 		titleTextStyle: {
@@ -375,8 +377,9 @@ function recovered_graph() {
 	data.addColumn({type:'string', role:'style'});
 	data.addRows([
 		[`${brr[4]}`, Number(arr[4]),'cyan'],
-	  	[`${brr[3]}`, Number(arr[3]),'gold'],
-	  	[`${brr[2]}`, Number(arr[2]),'green'],
+	  	[`${brr[3]}`, Number(arr[3]),'blue'],
+	  	[`${brr[2]}`, Number(arr[2]),'gold'],
+		[`${brr[1]}`, Number(arr[1]),'green'],
 	  	[`${brr[0]}`, Number(arr[0]),'red'],
   	]);
 	let options = {
